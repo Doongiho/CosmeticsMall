@@ -22,9 +22,21 @@ const getElement = (selection) => {
     throw new Error('해당 요소가 존재하지 않습니다.');
 }
 
+// 카트에 있는 리스트들도 로컬스토리지 저장
+const getStorageItem = (key) => {
+    let storageItem = localStorage.getItem(key);
+    if(storageItem) {
+       storageItem = JSON.parse(localStorage.getItem(key));
+    } else {
+        storageItem = [];
+    }
+    return storageItem;
+}
+
 export{
     productsUrl,
     setStorageItem,
     formatPrice,
-    getElement
+    getElement,
+    getStorageItem
 }

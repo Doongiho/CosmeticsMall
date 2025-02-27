@@ -1,6 +1,6 @@
 import '../cart/toggleCart.js';
 import '../toggleSidebar.js';
-
+import { addToCart } from '../cart/setupCart.js';
 
 import { formatPrice, getElement, productsUrl } from "../utils.js";
 
@@ -59,4 +59,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     loadingEl.style.display = 'none';
 
+})
+
+cartBtnEl.addEventListener('click', () => {
+    addToCart(productID);
 })
