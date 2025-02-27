@@ -29,6 +29,13 @@ export const addToCart = (id) => {
         const itemEl = items.find((value) => value.dataset.id === id);
         itemEl.textContent = amount;
     }
+    displayCartItemCount();
+
+    displayCartTotal();
+
+    setStorageItem('cart', cart);
+
+    openCart();
 }
 
 function displayCartItemsDOM() {

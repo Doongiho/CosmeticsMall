@@ -1,4 +1,5 @@
 // 보여주는 produts 리스트
+import { addToCart } from "./cart/setupCart.js";
 import { formatPrice } from "./utils.js";
 
 const display = (products, element, filters) => {
